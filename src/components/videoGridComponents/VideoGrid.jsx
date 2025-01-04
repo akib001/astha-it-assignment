@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import VideoCard from "./VideoCard";
 import { videoData } from "./videoData";
@@ -6,7 +6,6 @@ import { videoData } from "./videoData";
 const VideoGrid = () => {
   const navigate = useNavigate();
   const [focusedIndex, setFocusedIndex] = useState(0);
-  const gridRef = useRef(null);
   const [cols, setCols] = useState(4);
 
   const videos = videoData;
@@ -50,15 +49,8 @@ const VideoGrid = () => {
     }
   };
 
-  useEffect(() => {
-    if (gridRef.current) {
-      gridRef.current.focus();
-    }
-  }, [cols]);
-
   return (
     <div
-      ref={gridRef}
       tabIndex={-1}
       onKeyDown={handleKeyDown}
       className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 focus:outline-none"
