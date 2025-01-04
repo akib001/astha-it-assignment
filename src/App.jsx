@@ -4,6 +4,7 @@ import MainLayout from "./components/layout/MainLayout";
 import HomePage from "./pages/HomePage";
 import InfoPage from "./pages/InfoPage";
 import SeriesPage from "./pages/SeriesPage";
+import WatchPage from "./pages/WatchPage";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="series" element={<SeriesPage />} />
           <Route path="info" element={<InfoPage />} />
-          {/* <Route path="watch/:videoId" element={<WatchPage />} /> */}
+          <Route path="watch/:videoId" element={<WatchPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

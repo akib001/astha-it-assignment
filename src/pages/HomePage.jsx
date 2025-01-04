@@ -1,9 +1,10 @@
+import VideoGrid from "../components/videoGridComponents/VideoGrid";
+
 const HomePage = () => {
-  console.log("hoempage");
   return (
     <div className="space-y-8">
-      <h1 className="text-h5 text-foreground">Dramas & Series</h1>
-      asdfasdf
+      <h5 className="text-h5 text-foreground">Dramas & Series</h5>
+      <VideoGrid />
     </div>
   );
 };
